@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220331 20:16:29.574" rpa="false" schemaversion="2">
+<suite id="s1" name="Tests" source="C:\Users\Zheng\PycharmProjects\robot\Tests">
+<suite id="s1-s1" name="webtest G" source="C:\Users\Zheng\PycharmProjects\robot\Tests\webtest_G.robot">
+<kw name="Begin Web Test" library="keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220331 20:16:30.182" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220331 20:16:30.182" endtime="20220331 20:16:34.006"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:30.181" endtime="20220331 20:16:34.006"/>
+</kw>
+<test id="s1-s1-t1" name="Access To Website">
+<kw name="Go To Web Page" library="keywords">
+<kw name="Load Page" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220331 20:16:34.010" level="INFO">Opening url 'http://rental6.infotiv.net/webpage/html/gui/index.php'</msg>
+<status status="PASS" starttime="20220331 20:16:34.010" endtime="20220331 20:16:35.042"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:34.009" endtime="20220331 20:16:35.042"/>
+</kw>
+<kw name="Verify Start Page Loaded" library="keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Infotiv Car Rental</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220331 20:16:35.043" endtime="20220331 20:16:35.272"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220331 20:16:37.288" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220331 20:16:35.272" endtime="20220331 20:16:37.288"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:35.042" endtime="20220331 20:16:37.288"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:34.008" endtime="20220331 20:16:37.289"/>
+</kw>
+<doc>This is some basic information about the test</doc>
+<tag>Header</tag>
+<status status="PASS" starttime="20220331 20:16:34.006" endtime="20220331 20:16:37.291"/>
+</test>
+<test id="s1-s1-t2" name="User Can Click On About Text And Divert Back To About Page">
+<kw name="Go To Web Page" library="keywords">
+<kw name="Load Page" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220331 20:16:37.308" level="INFO">Opening url 'http://rental6.infotiv.net/webpage/html/gui/index.php'</msg>
+<status status="PASS" starttime="20220331 20:16:37.307" endtime="20220331 20:16:37.384"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:37.307" endtime="20220331 20:16:37.384"/>
+</kw>
+<kw name="Verify Start Page Loaded" library="keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Infotiv Car Rental</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220331 20:16:37.385" endtime="20220331 20:16:37.393"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220331 20:16:39.407" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220331 20:16:37.393" endtime="20220331 20:16:39.407"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:37.384" endtime="20220331 20:16:39.407"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:37.305" endtime="20220331 20:16:39.408"/>
+</kw>
+<kw name="Click On About Text" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:about</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220331 20:16:39.410" level="INFO">Clicking element 'id:about'.</msg>
+<status status="PASS" starttime="20220331 20:16:39.409" endtime="20220331 20:16:39.536"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220331 20:16:41.545" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220331 20:16:39.536" endtime="20220331 20:16:41.546"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:39.408" endtime="20220331 20:16:41.547"/>
+</kw>
+<kw name="Verify Current URL Is About Page" library="keywords">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${ABOUT_PAGE}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220331 20:16:41.571" level="INFO">Current location is 'http://rental6.infotiv.net/webpage/html/gui/about.php'.</msg>
+<status status="PASS" starttime="20220331 20:16:41.550" endtime="20220331 20:16:41.571"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220331 20:16:43.622" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220331 20:16:41.572" endtime="20220331 20:16:43.622"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:41.548" endtime="20220331 20:16:43.648"/>
+</kw>
+<doc>This is some basic information about the second test</doc>
+<tag>Header</tag>
+<status status="PASS" starttime="20220331 20:16:37.300" endtime="20220331 20:16:43.650"/>
+</test>
+<test id="s1-s1-t3" name="Verify Start Date">
+<kw name="Go To Web Page" library="keywords">
+<kw name="Load Page" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220331 20:16:43.657" level="INFO">Opening url 'http://rental6.infotiv.net/webpage/html/gui/index.php'</msg>
+<status status="PASS" starttime="20220331 20:16:43.656" endtime="20220331 20:16:43.714"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:43.656" endtime="20220331 20:16:43.714"/>
+</kw>
+<kw name="Verify Start Page Loaded" library="keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Infotiv Car Rental</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220331 20:16:43.715" endtime="20220331 20:16:43.727"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220331 20:16:45.730" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220331 20:16:43.727" endtime="20220331 20:16:45.730"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:43.715" endtime="20220331 20:16:45.730"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:43.655" endtime="20220331 20:16:45.730"/>
+</kw>
+<kw name="Verify Earliest Selectable Date Is Today" library="keywords">
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${start_date}</var>
+<arg>id:start</arg>
+<arg>min</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220331 20:16:45.784" level="INFO">${start_date} = 2022-03-31</msg>
+<status status="PASS" starttime="20220331 20:16:45.731" endtime="20220331 20:16:45.784"/>
+</kw>
+<kw name="Get Current Date" library="robot.libraries.DateTime">
+<var>${current_date}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20220331 20:16:45.786" level="INFO">${current_date} = 2022-03-31</msg>
+<status status="PASS" starttime="20220331 20:16:45.785" endtime="20220331 20:16:45.786"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${current_date}</arg>
+<arg>${start_date}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20220331 20:16:45.786" endtime="20220331 20:16:45.787"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220331 20:16:47.792" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220331 20:16:45.788" endtime="20220331 20:16:47.794"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:45.731" endtime="20220331 20:16:47.795"/>
+</kw>
+<doc>This is some basic information about the test on the earliest selectable start date is today</doc>
+<tag>Date Selection</tag>
+<status status="PASS" starttime="20220331 20:16:43.653" endtime="20220331 20:16:47.797"/>
+</test>
+<kw name="End Web Test" library="keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220331 20:16:47.806" endtime="20220331 20:16:50.023"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:47.805" endtime="20220331 20:16:50.025"/>
+</kw>
+<doc>Some information about the whole test suite</doc>
+<status status="PASS" starttime="20220331 20:16:29.616" endtime="20220331 20:16:50.025"/>
+</suite>
+<suite id="s1-s2" name="webtest VG" source="C:\Users\Zheng\PycharmProjects\robot\Tests\webtest_VG.robot">
+<kw name="Begin Web Test" library="keywords" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220331 20:16:50.066" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220331 20:16:50.066" endtime="20220331 20:16:51.723"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:50.065" endtime="20220331 20:16:51.724"/>
+</kw>
+<test id="s1-s2-t1" name="User Can Access To Start Page And Log In An Existing Account And Book A Car">
+<kw name="Given Go To Web Page" library="keywords">
+<kw name="Load Page" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220331 20:16:51.730" level="INFO">Opening url 'http://rental6.infotiv.net/webpage/html/gui/index.php'</msg>
+<status status="PASS" starttime="20220331 20:16:51.729" endtime="20220331 20:16:52.080"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:51.728" endtime="20220331 20:16:52.080"/>
+</kw>
+<kw name="Verify Start Page Loaded" library="keywords">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Infotiv Car Rental</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220331 20:16:52.081" endtime="20220331 20:16:52.107"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220331 20:16:54.115" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220331 20:16:52.107" endtime="20220331 20:16:54.116"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:52.080" endtime="20220331 20:16:54.116"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:51.726" endtime="20220331 20:16:54.117"/>
+</kw>
+<kw name="When Log In An Existing Account" library="keywords">
+<kw name="Access To Log In Page" library="keywords">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>id:login</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220331 20:16:54.155" level="INFO">Current page contains element 'id:login'.</msg>
+<status status="PASS" starttime="20220331 20:16:54.120" endtime="20220331 20:16:54.155"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:54.119" endtime="20220331 20:16:54.156"/>
+</kw>
+<kw name="Enter Username" library="keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>test@test.se</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220331 20:16:54.158" level="INFO">Typing text 'test@test.se' into text field 'id:email'.</msg>
+<status status="PASS" starttime="20220331 20:16:54.158" endtime="20220331 20:16:54.335"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:54.156" endtime="20220331 20:16:54.335"/>
+</kw>
+<kw name="Enter Password" library="keywords">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>1234567</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220331 20:16:54.337" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20220331 20:16:54.391" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220331 20:16:54.454" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220331 20:16:54.336" endtime="20220331 20:16:54.454"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:54.335" endtime="20220331 20:16:54.455"/>
+</kw>
+<kw name="Should Be Successfully Logged On" library="keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220331 20:16:54.456" level="INFO">Clicking button 'id:login'.</msg>
+<status status="PASS" starttime="20220331 20:16:54.456" endtime="20220331 20:16:54.688"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id:welcomePhrase</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220331 20:16:54.689" endtime="20220331 20:16:54.704"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220331 20:16:56.710" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220331 20:16:54.705" endtime="20220331 20:16:56.710"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:54.455" endtime="20220331 20:16:56.710"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:54.118" endtime="20220331 20:16:56.711"/>
+</kw>
+<kw name="Then Book A Car" library="keywords">
+<kw name="Shoud Be In Date Selction Page" library="keywords">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>id:tripQuestion</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220331 20:16:56.725" level="INFO">Current page contains element 'id:tripQuestion'.</msg>
+<status status="PASS" starttime="20220331 20:16:56.712" endtime="20220331 20:16:56.725"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:56.712" endtime="20220331 20:16:56.726"/>
+</kw>
+<kw name="Click Continue Button" library="keywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220331 20:16:56.726" level="INFO">Clicking button 'id:continue'.</msg>
+<status status="PASS" starttime="20220331 20:16:56.726" endtime="20220331 20:16:57.066"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:56.726" endtime="20220331 20:16:57.066"/>
+</kw>
+<kw name="Go To Car Selection Page" library="keywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@id="questionText"]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220331 20:16:57.067" endtime="20220331 20:16:57.086"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220331 20:16:59.097" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220331 20:16:57.086" endtime="20220331 20:16:59.097"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:57.067" endtime="20220331 20:16:59.097"/>
+</kw>
+<kw name="Click Book Button" library="keywords">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//*[@id="bookQ7pass5"]</arg>
+<arg>RETURN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220331 20:16:59.099" level="INFO">Sending key(s) ('RETURN',) to //*[@id="bookQ7pass5"] element.</msg>
+<msg timestamp="20220331 20:16:59.489" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20220331 20:16:59.489" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20220331 20:16:59.098" endtime="20220331 20:16:59.496"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:59.098" endtime="20220331 20:16:59.497"/>
+</kw>
+<kw name="Go To Confirm Page" library="keywords">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id:confirmQuestion</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220331 20:16:59.498" endtime="20220331 20:16:59.512"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220331 20:17:01.520" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220331 20:16:59.513" endtime="20220331 20:17:01.520"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:59.497" endtime="20220331 20:17:01.520"/>
+</kw>
+<kw name="Confirm Booking" library="keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:cardNum</arg>
+<arg>1234567890123456</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220331 20:17:01.521" level="INFO">Typing text '1234567890123456' into text field 'id:cardNum'.</msg>
+<status status="PASS" starttime="20220331 20:17:01.521" endtime="20220331 20:17:01.659"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:fullName</arg>
+<arg>aa</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220331 20:17:01.660" level="INFO">Typing text 'aa' into text field 'id:fullName'.</msg>
+<status status="PASS" starttime="20220331 20:17:01.659" endtime="20220331 20:17:01.750"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:cvc</arg>
+<arg>111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220331 20:17:01.751" level="INFO">Typing text '111' into text field 'id:cvc'.</msg>
+<status status="PASS" starttime="20220331 20:17:01.750" endtime="20220331 20:17:01.850"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:confirm</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220331 20:17:01.851" level="INFO">Clicking button 'id:confirm'.</msg>
+<status status="PASS" starttime="20220331 20:17:01.850" endtime="20220331 20:17:01.981"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>id:confirmMessage</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220331 20:17:01.981" endtime="20220331 20:17:01.997"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220331 20:17:04.002" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220331 20:17:01.998" endtime="20220331 20:17:04.002"/>
+</kw>
+<status status="PASS" starttime="20220331 20:17:01.520" endtime="20220331 20:17:04.004"/>
+</kw>
+<kw name="Clear Booking Test Date" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="mypage"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220331 20:17:04.007" level="INFO">Clicking element '//*[@id="mypage"]'.</msg>
+<status status="PASS" starttime="20220331 20:17:04.006" endtime="20220331 20:17:04.186"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Mypage</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220331 20:17:04.186" endtime="20220331 20:17:04.203"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220331 20:17:09.213" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220331 20:17:04.203" endtime="20220331 20:17:09.214"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:unBook1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220331 20:17:09.215" level="INFO">Clicking element 'id:unBook1'.</msg>
+<status status="PASS" starttime="20220331 20:17:09.214" endtime="20220331 20:17:09.440"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<arg>ACCEPT</arg>
+<arg>timeout=2s</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220331 20:17:09.442" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:02</msg>
+<status status="PASS" starttime="20220331 20:17:09.440" endtime="20220331 20:17:09.454"/>
+</kw>
+<status status="PASS" starttime="20220331 20:17:04.004" endtime="20220331 20:17:09.455"/>
+</kw>
+<status status="PASS" starttime="20220331 20:16:56.711" endtime="20220331 20:17:09.455"/>
+</kw>
+<doc>This is some basic information about the test</doc>
+<tag>VG_test</tag>
+<status status="PASS" starttime="20220331 20:16:51.724" endtime="20220331 20:17:09.458"/>
+</test>
+<kw name="End Web Test" library="keywords" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220331 20:17:09.468" endtime="20220331 20:17:11.728"/>
+</kw>
+<status status="PASS" starttime="20220331 20:17:09.466" endtime="20220331 20:17:11.729"/>
+</kw>
+<doc>Some information about the whole test on navigation flow of booking a car</doc>
+<status status="PASS" starttime="20220331 20:16:50.037" endtime="20220331 20:17:11.730"/>
+</suite>
+<status status="PASS" starttime="20220331 20:16:29.578" endtime="20220331 20:17:11.740"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Date Selection</stat>
+<stat pass="2" fail="0" skip="0">Header</stat>
+<stat pass="1" fail="0" skip="0">VG_test</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="webtest G">Tests.webtest G</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="webtest VG">Tests.webtest VG</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
